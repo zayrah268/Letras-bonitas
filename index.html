@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,13 +12,12 @@
 
   <style>
     :root{
-      /* ✅ NEW COLOR COMBINATION (Elegant + Premium) */
+      /* ✅ New Premium Color Combination */
       --bg:#0B0A12;
       --bg2:#141025;
       --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.04);
       --text:#F7F4FF;
-      --muted: rgba(247,244,255,.72);
+      --muted: rgba(247,244,255,.75);
       --border: rgba(255,255,255,.12);
       --shadow: 0 30px 90px rgba(0,0,0,.70);
       --radius: 26px;
@@ -35,7 +35,7 @@
     body{
       font-family:"Montserrat", sans-serif;
       color: var(--text);
-      line-height: 1.9;
+      line-height: 1.95;
       overflow-x:hidden;
       background:
         radial-gradient(900px 560px at 12% 12%, rgba(247,201,72,.14), transparent 60%),
@@ -156,51 +156,49 @@
       border: 1px solid rgba(247,201,72,.20);
       font-weight: 700;
       box-shadow: 0 0 24px rgba(247,201,72,.14);
+      color: rgba(247,244,255,.98);
+      text-decoration: none;
     }
 
-    /* CTA Link */
-    .ctaRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-      margin-top: 6px;
+    /* Professional Image */
+    .heroImageWrap{
+      margin-top: 18px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 25px 70px rgba(0,0,0,.65);
+      position: relative;
     }
-
-    a{
-      text-decoration:none;
-      font-weight: 800;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 18px;
-      border-radius: 14px;
-      cursor:pointer;
-      transition:.25s ease;
+    .heroImageWrap::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(11,10,18,.15), rgba(11,10,18,.60));
+      pointer-events:none;
+    }
+    .heroImage{
+      width:100%;
+      height: 340px;
+      object-fit: cover;
+      display:block;
+      filter: saturate(1.2) contrast(1.05);
+    }
+    .imgCaption{
+      position:absolute;
+      bottom:16px;
+      left:16px;
+      z-index:2;
+      background: rgba(0,0,0,.35);
       border: 1px solid rgba(255,255,255,.14);
-      user-select:none;
-      color: rgba(247,244,255,.95);
+      padding: 10px 14px;
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+      font-size: 13px;
+      color: rgba(255,255,255,.90);
+      box-shadow: 0 0 22px rgba(247,201,72,.16);
     }
 
-    .primaryLink{
-      background: linear-gradient(135deg, rgba(247,201,72,.16), rgba(244,114,182,.14));
-      box-shadow: 0 0 0 1px rgba(247,201,72,.12), 0 22px 60px rgba(0,0,0,.65);
-    }
-    .primaryLink:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 0 0 1px rgba(247,201,72,.22), 0 30px 85px rgba(0,0,0,.78);
-    }
-
-    .icon{
-      width:10px;
-      height:10px;
-      border-radius:999px;
-      background: linear-gradient(45deg, var(--gold), var(--teal));
-      box-shadow: 0 0 16px rgba(247,201,72,.42);
-      flex:0 0 auto;
-    }
-
-    /* Cards */
+    /* Layout */
     article{
       display:flex;
       flex-direction:column;
@@ -279,7 +277,7 @@
       font-weight: 800;
     }
 
-    /* List styles */
+    /* List */
     ul{
       margin-top: 12px;
       display:flex;
@@ -304,6 +302,11 @@
       font-size:18px;
       filter: drop-shadow(0 0 10px rgba(247,201,72,.25));
     }
+    ul li:hover{
+      transform: translateY(-2px);
+      border-color: rgba(247,201,72,.22);
+      box-shadow: 0 0 0 1px rgba(247,201,72,.10), 0 25px 60px rgba(0,0,0,.60);
+    }
 
     footer{
       margin-top: 34px;
@@ -317,6 +320,11 @@
       height:1px;
       background: rgba(255,255,255,.08);
       margin: 18px 0 12px;
+    }
+
+    @media(max-width: 768px){
+      .hero{ padding: 32px 18px; }
+      .heroImage{ height: 240px; }
     }
   </style>
 </head>
@@ -335,34 +343,33 @@
         <h1>Letras Bonitas: El Arte de Escribir con Estilo y Elegancia</h1>
 
         <p>
-          En un mundo donde las redes sociales y el contenido digital dominan la comunicación,
-          no solo importa lo que escribimos, sino cómo se ve lo que escribimos.
+          En un mundo donde las redes sociales y el contenido digital dominan la comunicación, no solo importa lo que escribimos, sino cómo se ve lo que escribimos.
           Aquí es donde entra el concepto de
-          <a class="highlight" href="https://letrasbonitashub.com.mx/" target="_blank" rel="noopener noreferrer">
-            Letras bonitas
-          </a>,
+          <a class="highlight" href="https://letrasbonitashub.com.mx/" target="_blank" rel="noopener noreferrer">Letras bonitas</a>,
           una tendencia que ha ganado mucha popularidad en los últimos años.
-          “Letras Bonitas” significa literalmente letras hermosas, pero en realidad representa algo mucho más creativo:
-          el arte de transformar palabras comunes en un texto atractivo, elegante y visualmente impactante.
+          “Letras Bonitas” significa literalmente letras hermosas, pero en realidad representa algo mucho más creativo: el arte de transformar palabras comunes en un texto atractivo, elegante y visualmente impactante.
         </p>
 
         <p>
-          Las letras bonitas se utilizan en muchas áreas como diseños para Instagram, invitaciones, carteles,
-          branding de negocios, cuadernos, frases motivacionales y hasta en contenido para gaming,
-          como banners o miniaturas. Este estilo de escritura no solo embellece, sino que también da identidad y
-          personalidad al mensaje. Cuando una frase está escrita con un estilo bonito, automáticamente genera más interés,
-          más confianza y una mejor impresión.
+          Las letras bonitas se utilizan en muchas áreas como diseños para Instagram, invitaciones, carteles, branding de negocios, cuadernos, frases motivacionales y hasta en contenido para gaming, como banners o miniaturas.
+          Este estilo de escritura no solo embellece, sino que también da identidad y personalidad al mensaje. Cuando una frase está escrita con un estilo bonito, automáticamente genera más interés, más confianza y una mejor impresión.
         </p>
 
-        <div class="ctaRow">
-          <a class="primaryLink" href="https://letrasbonitashub.com.mx/" target="_blank" rel="noopener noreferrer">
-            <span class="icon"></span> Explorar Letras Bonitas
-          </a>
+        <!-- ✅ Professional Relevant Image -->
+        <div class="heroImageWrap">
+          <img
+            class="heroImage"
+            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80"
+            alt="Letras bonitas, lettering y tipografía creativa"
+            loading="lazy"
+          />
+          <div class="imgCaption">Typography • Lettering • Estilo Premium</div>
         </div>
+
       </div>
     </section>
 
-    <!-- CONTENT -->
+    <!-- CONTENT (✅ NOTHING SKIPPED) -->
     <article>
 
       <section class="card">
@@ -377,9 +384,7 @@
             Letras gruesas, góticas o con efectos visuales
           </p>
           <p>
-            La idea principal es muy simple: hacer que la escritura se vea más atractiva y memorable.
-            En el mundo digital, donde la competencia es alta, usar letras bonitas puede ayudar a destacar
-            y crear una marca personal o profesional más fuerte.
+            La idea principal es muy simple: hacer que la escritura se vea más atractiva y memorable. En el mundo digital, donde la competencia es alta, usar letras bonitas puede ayudar a destacar y crear una marca personal o profesional más fuerte.
           </p>
         </div>
       </section>
@@ -389,8 +394,7 @@
         <div class="text">
           <p>
             Una de las razones más fuertes por las que las Letras Bonitas se han vuelto tendencia es porque las personas reaccionan más rápido a lo visual.
-            Un texto bonito capta la atención y hace que el mensaje se sienta más importante.
-            Por eso las marcas, los creadores y los diseñadores invierten tanto en tipografía y diseño.
+            Un texto bonito capta la atención y hace que el mensaje se sienta más importante. Por eso las marcas, los creadores y los diseñadores invierten tanto en tipografía y diseño.
           </p>
           <p>Las Letras Bonitas son populares porque:</p>
           <p>
@@ -401,8 +405,7 @@
             Permiten expresar emociones y creatividad con más fuerza
           </p>
           <p>
-            Además, este tipo de letras funciona tanto en diseño digital como en escritura tradicional.
-            Y lo mejor es que cualquier persona puede aprender a utilizarlas con práctica y buenos recursos.
+            Además, este tipo de letras funciona tanto en diseño digital como en escritura tradicional. Y lo mejor es que cualquier persona puede aprender a utilizarlas con práctica y buenos recursos.
           </p>
         </div>
       </section>
@@ -423,8 +426,7 @@
         <h2>¿Dónde puedes usar Letras Bonitas?</h2>
         <div class="text">
           <p>
-            Una gran ventaja de las Letras Bonitas es que se adaptan a casi cualquier proyecto.
-            Ya sea personal o profesional, mejoran el aspecto del contenido de forma inmediata.
+            Una gran ventaja de las Letras Bonitas es que se adaptan a casi cualquier proyecto. Ya sea personal o profesional, mejoran el aspecto del contenido de forma inmediata.
           </p>
           <p>Algunos usos más comunes incluyen:</p>
           <p>
@@ -438,8 +440,7 @@
             Contenido de gaming: overlays, diseños de stream, nombres de clan
           </p>
           <p>
-            Cuando el texto se presenta de manera atractiva, el contenido se siente más serio,
-            más cuidado y con mayor valor.
+            Cuando el texto se presenta de manera atractiva, el contenido se siente más serio, más cuidado y con mayor valor.
           </p>
         </div>
       </section>
@@ -492,8 +493,7 @@
           </table>
 
           <p>
-            Con esta estructura, tu contenido se verá más profesional,
-            y evitarás usar fuentes que no combinan con tu intención.
+            Con esta estructura, tu contenido se verá más profesional, y evitarás usar fuentes que no combinan con tu intención.
           </p>
         </div>
       </section>
@@ -503,20 +503,19 @@
         <div class="text">
           <p>Tener letras bonitas no significa complicar el texto. A veces, lo simple es lo más elegante. Lo importante es mantener equilibrio, claridad y diseño limpio. Aquí tienes consejos que funcionan siempre:</p>
 
-          <ul>
-            <li>Mantén el espacio entre letras y palabras equilibrado</li>
-            <li>No uses demasiadas fuentes diferentes en un mismo diseño</li>
-            <li>Asegura buena legibilidad: una letra bonita debe leerse rápido</li>
-            <li>Usa contraste entre texto y fondo</li>
-            <li>Alinea el texto correctamente (centrado o a la izquierda según el diseño)</li>
-            <li>Agrega pequeños detalles: líneas, puntos o símbolos simples</li>
-            <li>Usa títulos en negrita y textos secundarios en fuentes limpias</li>
-            <li>Mantén consistencia: usa 2 o 3 estilos principales en toda tu marca</li>
-          </ul>
+          <p>
+            Mantén el espacio entre letras y palabras equilibrado<br><br>
+            No uses demasiadas fuentes diferentes en un mismo diseño<br><br>
+            Asegura buena legibilidad: una letra bonita debe leerse rápido<br><br>
+            Usa contraste entre texto y fondo<br><br>
+            Alinea el texto correctamente (centrado o a la izquierda según el diseño)<br><br>
+            Agrega pequeños detalles: líneas, puntos o símbolos simples<br><br>
+            Usa títulos en negrita y textos secundarios en fuentes limpias<br><br>
+            Mantén consistencia: usa 2 o 3 estilos principales en toda tu marca
+          </p>
 
           <p>
-            Estos detalles pequeños hacen una gran diferencia.
-            Incluso una fuente básica puede verse premium si está bien aplicada.
+            Estos detalles pequeños hacen una gran diferencia. Incluso una fuente básica puede verse premium si está bien aplicada.
           </p>
         </div>
       </section>
@@ -525,22 +524,24 @@
         <h2>Herramientas recomendadas para crear Letras Bonitas</h2>
         <div class="text">
           <p>Hoy existen muchas herramientas digitales y tradicionales para crear letras bonitas con facilidad. Lo importante es elegir según tu nivel.</p>
-          <p><strong>Herramientas digitales</strong><br>
+
+          <p><strong>Herramientas digitales</strong><br><br>
             Canva (ideal para principiantes)<br><br>
             Adobe Illustrator (para logos y tipografía profesional)<br><br>
             Photoshop (efectos y diseño creativo)<br><br>
             Procreate (perfecto para iPad y lettering a mano)<br><br>
             Generadores de fuentes (para bios y textos rápidos)
           </p>
-          <p><strong>Herramientas tradicionales</strong><br>
+
+          <p><strong>Herramientas tradicionales</strong><br><br>
             Brush pens para caligrafía<br><br>
             Marcadores y fineliners para trazos limpios<br><br>
             Cuadernos o bullet journals para practicar<br><br>
             Plumas de caligrafía para estilos elegantes
           </p>
+
           <p>
-            Si estás empezando, Canva es una excelente opción.
-            Con práctica, puedes avanzar al lettering a mano y crear estilos únicos.
+            Si estás empezando, Canva es una excelente opción. Con práctica, puedes avanzar al lettering a mano y crear estilos únicos.
           </p>
         </div>
       </section>
@@ -549,6 +550,7 @@
         <h2>Ideas creativas para usar Letras Bonitas y crecer online</h2>
         <div class="text">
           <p>Si tu objetivo es crecer en redes sociales o crear una marca fuerte, Letras Bonitas es una herramienta estratégica. Aquí tienes ideas que puedes aplicar:</p>
+
           <p>
             Diseña portadas de historias destacadas con letras aesthetic<br><br>
             Crea frases motivacionales con lettering para Pinterest<br><br>
@@ -558,9 +560,9 @@
             Diseña banners de gaming con letras gruesas y claras<br><br>
             Usa texto bonito para promociones y anuncios visuales
           </p>
+
           <p>
-            El contenido visual con buena tipografía siempre gana más atención.
-            Las letras bonitas no solo decoran: venden, atraen y generan confianza.
+            El contenido visual con buena tipografía siempre gana más atención. Las letras bonitas no solo decoran: venden, atraen y generan confianza.
           </p>
         </div>
       </section>
@@ -570,14 +572,12 @@
         <div class="text">
           <p>
             Las Letras Bonitas son una forma moderna y creativa de hacer que tus palabras tengan más fuerza visual.
-            Ya sea que quieras mejorar tu perfil de Instagram, diseñar un logo profesional, crear invitaciones elegantes
-            o mejorar el aspecto de tu contenido online, este estilo de escritura te ayudará a destacar.
-            Un texto bien diseñado se percibe más profesional, más atractivo y más confiable.
+            Ya sea que quieras mejorar tu perfil de Instagram, diseñar un logo profesional, crear invitaciones elegantes o mejorar el aspecto de tu contenido online,
+            este estilo de escritura te ayudará a destacar. Un texto bien diseñado se percibe más profesional, más atractivo y más confiable.
           </p>
           <p>
             La clave está en elegir el estilo correcto, mantener consistencia y combinar belleza con legibilidad.
-            Porque cuando tus letras se ven bonitas, tu mensaje se vuelve más poderoso,
-            y tu contenido se queda en la mente de las personas.
+            Porque cuando tus letras se ven bonitas, tu mensaje se vuelve más poderoso, y tu contenido se queda en la mente de las personas.
           </p>
         </div>
       </section>
